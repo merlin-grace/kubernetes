@@ -1,5 +1,6 @@
 1. Remove any existing
 -------------------
+
 sudo yum remove -y docker-ce docker-ce-cli
 sudo yum remove -y yum-utils
 
