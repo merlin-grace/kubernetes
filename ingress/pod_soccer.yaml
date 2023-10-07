@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: soccer 
+  labels:
+    env: soccer 
+spec:
+  containers:
+  - image: iam7hills/dockerdemo:soccer-ingress
+    name: app2
+    ports:
+    - containerPort: 8080
+    imagePullPolicy: Always

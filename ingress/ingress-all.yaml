@@ -1,0 +1,47 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sports-all 
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: cricket.sports.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: cricket
+            port:
+              number: 8080
+  - host: soccer.sports.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: soccer
+            port:
+              number: 8080
+  - host: sports.com
+    http:
+      paths:
+      - path: /cricket
+        pathType: Prefix
+        backend:
+          service:
+            name: cricket
+            port:
+              number: 8080
+      - path: /soccer
+        pathType: Prefix
+        backend:
+          service:
+            name: soccer
+            port:
+              number: 8080
+

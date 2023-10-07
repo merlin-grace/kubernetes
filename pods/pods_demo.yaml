@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hillspod
+spec:
+  containers:
+  - image: iam7hills/sevenhills:1.0
+    name: sevenhills
+    ports:
+    - containerPort: 8080

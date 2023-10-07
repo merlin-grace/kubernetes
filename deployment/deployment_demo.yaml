@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: valuetomatch
+  template:
+    metadata:
+      labels:
+        app: valuetomatch
+    spec:
+      containers:
+      - name: deploymentpod
+        image: iam7hills/dockerdemo:3.0
+        ports:
+        - containerPort: 8080

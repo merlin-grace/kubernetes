@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cricket 
+  labels:
+    env: cricket 
+spec:
+  containers:
+  - image: iam7hills/dockerdemo:cricket-ingress
+    name: app1
+    ports:
+    - containerPort: 8080
+    imagePullPolicy: Always
