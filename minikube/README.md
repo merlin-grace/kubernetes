@@ -1,4 +1,4 @@
-1. Remove any existing
+**1. Remove any existing**
 ---------------------
 
 
@@ -6,7 +6,7 @@ sudo yum remove -y docker-ce docker-ce-cli
 
 sudo yum remove -y yum-utils
 
-2. Fresh Docker Installation
+**2. Fresh Docker Installation**
 -----------------------
 From the link : https://docs.docker.com/engine/install/centos/
 
