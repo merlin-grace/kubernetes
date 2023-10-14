@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: injectdata
+spec:
+  containers:
+  - image: iam7hills/dockerdemo:configmapdemo
+    name: demo
+    imagePullPolicy: Always
+    env:
+    - name: ENVIRONMENT
+      valueFrom:
+        configMapKeyRef:
+          name: configdata
+          key: environment
+    - name: PORT
+      valueFrom:
+        configMapKeyRef:
+          name: configdata
+          key: port
+

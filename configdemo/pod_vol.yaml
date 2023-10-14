@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: injectdatavol
+spec:
+  volumes:
+  - name: volumemap
+    configMap:
+      name: configdata
+  containers:
+  - image: iam7hills/dockerdemo:configmapdemo
+    name: demo
+    imagePullPolicy: Always
+    volumeMounts:
+    - name: volumemap
+      mountPath: /tmp
+
