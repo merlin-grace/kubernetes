@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appdeployment
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploylabel
+  template:
+    metadata:
+      labels:
+        app: deploylabel
+    spec:
+      containers:
+      - name: deploymentpod
+        image: iam7hills/dockerdemo:tomcatapp-23
+        envFrom:
+        - configMapRef:
+            name: configdata
+        ports:
+        - containerPort: 8080
