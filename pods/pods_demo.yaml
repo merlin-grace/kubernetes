@@ -1,10 +1,10 @@
 apiVersion: v1
-kind: Pod                                               // Kind can be Pod/Deployment/Service/Ingress
+kind: Pod                                          # Kind can be Pod/Deployment/Service/Ingress
 metadata:
-  name: podsdemo                                       //  This is the name of the pod instance, otherwise called as hostname
+  name: podsdemo                                   #  This is the name of the pod instance, otherwise called as hostname
 spec:
   containers:
-  - image: iam7hills/learnkubernetes:podsdemo-1.0      // iam7hills/learnkubernetes --> is DockerHub repository and podsdemo-1.0 is the tagname
+  - image: iam7hills/learnkubernetes:podsdemo-1.0  # iam7hills/learnkubernetes --> is DockerHub repository and podsdemo-1.0 is the tagname
     name: podsdemo
     ports:
-    - containerPort: 8080                             // application runs with the port number 8080
+    - containerPort: 8080                          # application runs with the port number 8080
