@@ -5,6 +5,10 @@ metadata:
   labels:
     type: web
 spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      type: web1
   template:
     metadata:
       name: nginxpods
@@ -12,9 +16,5 @@ spec:
         type: web1
     spec:
       containers:
-      - image: iam7hills/learnkubernetes:podsdemo-1.0 
+      - image: iam7hills/learnkubernetes:podsdemo-1.0
         name: podsdemo
-  replicas: 6
-  selector:
-    matchLabels:
-      type: web1
