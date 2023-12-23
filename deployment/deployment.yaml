@@ -18,3 +18,4 @@ spec:
       containers:
       - image: iam7hills/learnkubernetes:podsdemo-1.0
         name: podsdemo
+        imagePullPolicy: Always
