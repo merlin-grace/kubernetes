@@ -9,8 +9,8 @@ spec:
   strategy:
     type: RollingUpdate      # Optional
     rollingUpdate:          # Optional
-      maxUnavailable: 1
-      maxSurge: 1
+      maxUnavailable: 1    #Optional
+      maxSurge: 1         # Optional
     
   selector:
     matchLabels:
