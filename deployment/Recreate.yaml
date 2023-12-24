@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploymentdemo
+  labels:
+    type: web
+spec:
+  replicas: 6
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      type: web1
+  template:
+    metadata:
+      name: nginxpods
+      labels:
+        type: web1
+    spec:
+      containers:
+      - image: iam7hills/learnkubernetes:podsdemo-1.0
+        name: podsdemo
+        imagePullPolicy: Always
