@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: podsdemo                    
 spec:
-  hostNetwork: true
+  hostNetwork: true  # Should be true to access PODS from your browser http://<your-ip>:80
   containers:
   - image: iam7hills/learnkubernetes:podsdemo-1.0  
     name: podsdemo
