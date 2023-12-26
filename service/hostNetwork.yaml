@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod                                         
+metadata:
+  name: podsdemo                    
+spec:
+  hostNetwork: true
+  containers:
+  - image: iam7hills/learnkubernetes:podsdemo-1.0  
+    name: podsdemo
+    ports:
+    - containerPort: 80                          
+      

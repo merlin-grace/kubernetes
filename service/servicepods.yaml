@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod                                          # Kind can be Pod/Deployment/Service/Ingress
+metadata:
+  name: serdemo
+  labels:
+    app: nginxapp
+spec:
+  containers:
+  - image: iam7hills/learnkubernetes:podsdemo-4.0
+    name: serdemo
+    ports:
+    - containerPort: 80
+    imagePullPolicy: Always
